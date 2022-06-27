@@ -24,7 +24,7 @@ I want to implement the paper's algorithms with openMP / CUDA which I learn from
 - Divide & Conquer
   - Divide the elements into many groups. Each group will do the sweep operation in each iteration
   - Iteratively update until the group size is equal to a row / column
-  <img src="dc.jpg" width="100%" height="100%">
+  <img src="dc.jpg" width="80%" height="80%">
   
 - Reformulation
   - Reformulate the formula of the sweep operation
