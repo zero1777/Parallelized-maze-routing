@@ -14,20 +14,20 @@ I want to implement the paper's algorithms with openMP / CUDA which I learn from
   - Path: the coordination of all grids on the shortest path
 
 ## Algorithm
-1. Choose one pin as source and set its cost to 0
-2. Relaxing the cost of other grids using sweep operations
-3. Find out the unrouted pin with minimum cost
-4. Retrace its path and set the grid cost belongs to the path to 0
-5. Iteratively performing step 2-4 until all the pins are routed
+1. Choose one pin as source and set its cost to 0.
+2. Relaxing the cost of other grids using sweep operations.
+3. Find out the unrouted pin with minimum cost.
+4. Retrace its path and set the grid cost belongs to the path to 0.
+5. Iteratively performing step 2-4 until all the pins are routed.
 
 ## Parallelization sweep
 - Divide & Conquer
-  - Divide the elements into many groups. Each group will do the sweep operation in each iteration
-  - Iteratively update until the group size is equal to a row / column
+  - Divide the elements into many groups. Each group will do the sweep operation in each iteration.
+  - Iteratively update until the group size is equal to a row / column.
   <img src="dc.jpg" width="70%" height="70%">
   
 - Reformulation
-  - Reformulate the formula of the sweep operation
+  - Reformulate the formula of the sweep operation.
   - Turning into two prefix problems (prefix sum + prefix min), which is good to parallelize.
 
 ## Evaluation
